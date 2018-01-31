@@ -1,0 +1,16 @@
+﻿<Window x:Class="MakeSectets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakeSectets"
+        mc:Ignorable="d"
+        Title="MakeSecrets for SIDI by Looney" Height="190" Width="296">
+    <Grid>
+        <Button Click="maFiles_Click" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="100">maFiles</Button>
+        <Button Click="SID_Click" Margin="120,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150">Steam Item Drop Idler</Button>
+        <Button Click="Start_Click" Margin="10,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="260">Start</Button>
+        <TextBlock Name="textmaFiles" Margin="10,120,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">maFiles: </TextBlock>
+        <TextBlock Name="textSIDI" Margin="10,135,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">SIDI: </TextBlock>
+    </Grid>
+</Window>
