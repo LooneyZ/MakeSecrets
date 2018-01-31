@@ -19,7 +19,6 @@ namespace MakeSectets
         {
             InitializeComponent();
             AppDomain.CurrentDomain.AssemblyResolve += AppDomain_AssemblyResolve;
-
         }
 
         private static Assembly AppDomain_AssemblyResolve(object sender, ResolveEventArgs args)
@@ -28,20 +27,17 @@ namespace MakeSectets
             {
                 return Assembly.Load(MakeSectets.Properties.Resources.Newtonsoft_Json);
             }
-
             return null;
         }
 
         private void maFiles_Click(object sender, RoutedEventArgs e)
         {
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
-
             DialogResult result = folderBrowser.ShowDialog();
             
             if (!string.IsNullOrWhiteSpace(folderBrowser.SelectedPath))
             {
                 files = Directory.GetFiles(folderBrowser.SelectedPath);
-              
             }
 
             textmaFiles.Text = "maFiles: " + folderBrowser.SelectedPath;
@@ -50,7 +46,6 @@ namespace MakeSectets
         private void SID_Click(object sender, RoutedEventArgs e)
         {
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
-
             DialogResult result = folderBrowser.ShowDialog();
 
             SIDIpath = folderBrowser.SelectedPath;
@@ -89,7 +84,6 @@ namespace MakeSectets
                 {
 
                 }
-                
             }
             if(counter == 0) System.Windows.MessageBox.Show($"Generated {counter} files.\nSeems that you entered the wrong way or files are crypted.\n\nСгенерировано {counter} файлов.\nПохоже Вы указали неверный путь или файлы зашифрованы.");
             else System.Windows.MessageBox.Show($"Generated {counter} files\n\nСгенерировано {counter} файлов.");
